@@ -13,9 +13,13 @@ To make the generated framework available:
 1. Download the _Dynamic_ framework from the [Google Cast SDK manual setup](https://developers.google.com/cast/docs/ios_sender#manual_setup).
 2. Rename the corresponding zip as `GoogleCast.xcframework.zip`.
 3. Calculate the zip checksum using `swift package compute-checksum /path/to/GoogleCast.xcframework.zip`
-3. Update the `Package.swift` in this repository with the framework version number and the checksum that you obtained. Also update the deployment target according to the official SDK documentation.
+3. Update the `Package.swift` in this repository:
+    - Bump the framework version number to match the new SDK version.
+    - Replace the existing checksum with the value obtained above.
+    - Adjust the deployment target according to the official SDK documentation.
+    - Update the `swift-tools-version` to [a version that supports the selected deployment target](https://xcodereleases.com/).
 4. Commit the changes on `main` and create a corresponding tag.
 5. Push the commit and the tag to GitHub.
 6. Attach the binary to the tag on GitHub.
 
-Do not commit the binaries in the repository, as this would slow down checkouts made by SPM as the repostory grows.
+Do not commit the binaries in the repository, as this would slow down checkouts made by SPM as the repository grows.
