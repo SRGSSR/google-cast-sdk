@@ -1,16 +1,16 @@
-// swift-tools-version:5.5
+// swift-tools-version:5.7
 
 import PackageDescription
 
 struct PackageMetadata {
-    static let version: String = "4.8.4"
-    static let checksum: String = "c9c3a794e8585198b59c6bb7da5418a3194ffa1ffa6f9a1cbdf4dc0ea26dc6cf"
+    static let version: String = "4.8.6"
+    static let checksum: String = "55f6c21291a1315c68063f07e7d76225564bff70f2fd38caad135c71d66eb310"
 }
 
 let package = Package(
     name: "GoogleCast",
     platforms: [
-        .iOS(.v15),
+        .iOS(.v16),
     ],
     products: [
         .library(
